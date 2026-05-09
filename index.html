@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Egg Products | Black & Orange Excellence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="close-cart" onclick="toggleCart()">✕</button>
+      </div>
+      <div class="cart-items-list" id="cartItems">
+        <p style="color: var(--text-muted); text-align: center; margin-top: 40px;">Your cart is empty.</p>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Checkout Now</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#top" class="logo-container">
+        <img src="EGGHUB.svg" alt="Premium Eggs Logo">
+      </a>
+      
+      <div class="cart-trigger" onclick="toggleCart()">
+        <span>🛒</span> Cart (<span id="cart-count">0</span>)
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Crack Open <span>Excellence</span></h1>
+    <p>Fresh pasture-raised eggs delivered from our farm to your door.</p>
+  </section>
+
+  <section id="products" class="products-container">
+    <h2 style="text-align:center; margin-bottom: 3rem; font-size: 2.5rem;">Fresh Arrivals</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="ImageFolder/ChickenEgg.jpg" class="product-image">
+        <div class="product-info">
+          <h3>Chicken Eggs</h3>
+          <p class="product-desc">One dozen organic brown eggs.</p>
+          <div class="product-price">$5.99</div>
+          <button class="add-to-cart-btn" onclick="addItem('Chicken Eggs', 5.99)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="ImageFolder/DuckEgg.jpg" class="product-image">
+        <div class="product-info">
+          <h3>Duck Eggs</h3>
+          <p class="product-desc">6-pack of rich, creamy duck eggs.</p>
+          <div class="product-price">$7.49</div>
+          <button class="add-to-cart-btn" onclick="addItem('Duck Eggs', 7.49)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="ImageFolder/QuailEgg.jpg" class="product-image">
+        <div class="product-info">
+          <h3>Quail Eggs</h3>
+          <p class="product-desc">18-pack of fresh quail eggs</p>
+          <div class="product-price">$8.99</div>
+          <button class="add-to-cart-btn" onclick="addItem('Quail Eggs', 8.99)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="ImageFolder/EmuEgg.jpg" class="product-image">
+        <div class="product-info">
+          <h3>Emu Eggs</h3>
+          <p class="product-desc">One giant emu egg, known for its size equal to about 10 chicken eggs.</p>
+          <div class="product-price">$35.00</div>
+          <button class="add-to-cart-btn" onclick="addItem('Emu Egg', 35.00)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="ImageFolder/OstrichEgg.jpg" class="product-image">
+        <div class="product-info">
+          <h3>Ostrich Eggs</h3>
+          <p class="product-desc">One dozen heirloom Araucana light Ostrich eggs.</p>
+          <div class="product-price">$9.99</div>
+          <button class="add-to-cart-btn" onclick="addItem('Ostrich Eggs', 9.99)">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="ImageFolder/GooseEgg.jpg" class="product-image">
+        <div class="product-info">
+          <h3>Goose Eggs</h3>
+          <p class="product-desc">6-pack of premium Goose eggs for incubation.</p>
+          <div class="product-price">$18.50</div>
+          <button class="add-to-cart-btn" onclick="addItem('Goose Eggs', 18.50)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews-section">
+    <h2 style="text-align:center; margin-bottom: 3rem; font-size: 2.5rem; color: white;">Customer <span>Reviews</span></h2>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">“Duck Eggs completely elevated my baking so rich and flavorful, their deep taste makes everything turn out better.”</p>
+        <div class="review-author">— Jakob J.</div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">“Super fast service and the packaging is very secure. Not a single cracked shell in my last 5 orders.”</p>
+        <div class="review-author">— Amboy M.</div>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">"The Chicken Eggs are stunning and taste incredibly fresh. My brunch guests were very impressed!"</p>
+        <div class="review-author1">— Palicte K.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-info">
+      <h2 style="font-size: 3rem; color: white;">Contact <span>Us</span></h2>
+      <p>Reach out for wholesale or farm inquiries.</p>
+      <div style="margin-top: 20px;">📧 Oke@Egghub.com</div>
+      <div style="margin-top: 10px;">📞 0699994999</div>
+    </div>
+    <div class="contact-form-container">
+      <form onsubmit="event.preventDefault(); alert('Message Sent!');">
+        <div class="form-group"><input type="text" placeholder="Full Name" required></div>
+        <div class="form-group"><input type="email" placeholder="Email Address" required></div>
+        <div class="form-group"><textarea rows="4" placeholder="How can we help?"></textarea></div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Premium Egg Products. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
